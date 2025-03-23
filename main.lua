@@ -26,13 +26,20 @@ SMODS.Joker {
     yes_pool_flag = 'cavendish_extinct',
     config = {
         extra = {
-            exponential = 3,
+            xmult = 10000
         }
     },
     loc_vars = function(self, info_queue, card)
         return {
-            vars = { card.ability.extra.exponential }
+            vars = { card.ability.extra.xmult }
         }
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main then
+            return {
+                xmult = card.ability.extra.xmult
+            }
+        end
     end,
 }
 
@@ -76,7 +83,7 @@ SMODS.Joker:take_ownership('cavendish',
                             end
                         }))
                         return {
-                            message = 'somethings happening..'
+                            message = 'something\'s happening..'
                             --message = localize('k_extinct_ex')
                         }
                     else
