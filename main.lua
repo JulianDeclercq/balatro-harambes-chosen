@@ -23,7 +23,17 @@ SMODS.Joker {
     pos = { x = 0, y = 0 },
     unlocked = true,
     discovered = true,
-    yes_pool_flag = 'cavendish_extinct'
+    yes_pool_flag = 'cavendish_extinct',
+    config = {
+        extra = {
+            exponential = 3,
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {
+            vars = { card.ability.extra.exponential }
+        }
+    end,
 }
 
 SMODS.Joker:take_ownership('cavendish',
