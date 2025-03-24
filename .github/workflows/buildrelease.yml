@@ -31,15 +31,31 @@ jobs:
       # runs a set of commands using the runners shell
       - name: run a multi-line script
         run: |
-          echo add other actions to build,
-          echo test, and deploy your project.
+          CURRENT_DIR=$(pwd)
+          TEMP_DIR=$(mktemp -d)
+          DEST_DIR="$TEMP_DIR/harambeschosen"
+          
+          mkdir -p "$DEST_DIR"
+          cp -r localization "$DEST_DIR/"
+          cp main.lua "$DEST_DIR/"
+          
+          mkdir -p "$DEST_DIR/assets"
+          rsync -av --exclude='originals' assets/ "$DEST_DIR/assets/"
+          
+          (
+            cd "$TEMP_DIR"
+            zip -r "$CURRENT_DIR/harambeschosen.zip" harambeschosen
+          )
+          
+          rm -rf "$TEMP_DIR"
 
-      - name: build
-        run: bash release.sh
+#      - name: build
+#        run: bash release.sh
+      
+      - name: list files
+        run: ls -a
       - name: release
         uses: softprops/action-gh-release@v2
         if: startswith(github.ref, 'refs/tags/')
         with:
           files: harambeschosen.zip
-      - name: list files
-        run: ls -a
