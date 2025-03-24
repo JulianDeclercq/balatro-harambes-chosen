@@ -8,7 +8,11 @@ This mods adds a third entry to Balatro's banana chain!
     <img width="30%" src="https://github.com/JulianDeclercq/harambes-chosen/blob/main/assets/harambedescription.png" alt="description">
 </div>
 
-# Inspiration
-Inspired by a chain of comments on [this YouTube short](https://www.youtube.com/shorts/zJQsjkq-cQY)
+## Inspiration
+Inspired by a chain of comments on [this YouTube short](https://www.youtube.com/shorts/zJQsjkq-cQY).
 
-![harambeinspiration](https://github.com/user-attachments/assets/ae90255c-3c4a-46ca-ad08-4055c7b16a2f)
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/ae90255c-3c4a-46ca-ad08-4055c7b16a2f" alt="card">
+</div>
+
+
