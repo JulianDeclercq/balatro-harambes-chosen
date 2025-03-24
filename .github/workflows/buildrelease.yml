@@ -35,6 +35,6 @@ jobs:
         run: bash release.sh
       - name: release
         uses: softprops/action-gh-release@v2
-#        if: startswith(github.ref, 'refs/tags/')
+        if: startswith(github.ref, 'refs/tags/')
         with:
           files: harambeschosen.zip
