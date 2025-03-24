@@ -21,10 +21,6 @@ jobs:
       # checks-out your repository under $github_workspace, so your job can access it
       - uses: actions/checkout@v4
 
-      # runs a single command using the runners shell
-      - name: run a one-line script
-        run: echo hello, world!
-
       # runs a set of commands using the runners shell
       - name: run a multi-line script
         run: |
