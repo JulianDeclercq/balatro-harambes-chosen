@@ -2,9 +2,9 @@ name: Build release
 
 # controls when the workflow will run
 on:
-  # triggers the workflow on push or pull request events but only for the "main" branch
+  # triggers the workflow on push of tags that start with v (e.g. v1.2.9)
   push:
-    branches: [ "main" ]
+    tags: [ "v*" ]
 
   # allows you to run this workflow manually from the actions tab
   workflow_dispatch:
@@ -38,3 +38,5 @@ jobs:
         if: startswith(github.ref, 'refs/tags/')
         with:
           files: harambeschosen.zip
+      - name: list files
+        run: ls -a
