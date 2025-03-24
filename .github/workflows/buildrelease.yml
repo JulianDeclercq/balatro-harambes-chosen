@@ -1,5 +1,8 @@
 name: Build release
 
+permissions:
+  contents: write
+
 # controls when the workflow will run
 on:
   # triggers the workflow on push of tags that start with v (e.g. v1.2.9)
