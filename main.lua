@@ -23,7 +23,11 @@ SMODS.Joker {
     pos = { x = 0, y = 0 },
     unlocked = true,
     discovered = true,
-    yes_pool_flag = 'cavendish_extinct',
+    yes_pool_flag = 'NEVER', -- this property doesn't actually exist, so it won't be in pool
+    eternal_compat = true,
+    perishable_compat = false,
+    blueprint_compat = true,
+    rarity = 4, -- for cool Legendary badge!
     config = {
         extra = {
             xmult = 10000
@@ -45,7 +49,6 @@ SMODS.Joker {
 
 SMODS.Joker:take_ownership('cavendish',
         {
-            no_pool_flag = 'cavendish_extinct',
             config = {
                 extra = {
                     odds = 2,
@@ -74,7 +77,21 @@ SMODS.Joker:take_ownership('cavendish',
                                         card:remove()
 
                                         -- you can do more AFTER stuff here
-                                        G.GAME.pool_flags.cavendish_extinct = true
+                                        G.E_MANAGER:add_event(Event({
+                                            trigger = 'after',
+                                            delay = 2.5,
+                                            blockable = false,
+                                            func = function()
+                                                SMODS.add_card({
+                                                    key = 'j_harambes_chosen',
+                                                    set = 'Joker',
+                                                    area = G.jokers,
+                                                    no_edition = true,
+                                                })
+
+                                                return true
+                                            end
+                                        }))
 
                                         return true
                                     end
@@ -83,7 +100,7 @@ SMODS.Joker:take_ownership('cavendish',
                             end
                         }))
                         return {
-                            message = 'something\'s happening..'
+                            message = 'Finally..'
                             --message = localize('k_extinct_ex')
                         }
                     else
