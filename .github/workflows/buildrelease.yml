@@ -9,9 +9,6 @@ on:
   push:
     tags: [ "v*" ]
 
-  # allows you to run this workflow manually from the actions tab
-  workflow_dispatch:
-
 # a workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # this workflow contains a single job called "build"
@@ -49,9 +46,6 @@ jobs:
           
           rm -rf "$TEMP_DIR"
 
-#      - name: build
-#        run: bash release.sh
-      
       - name: list files
         run: ls -a
       - name: release
