@@ -3,9 +3,9 @@
   "name": "Harambe's Chosen",
   "prefix": "harambe",
   "author": [ "Joolean" ],
-  "description": "description",
+  "description": "Cavendish went extinct... just as planned.",
   "main_file": "main.lua",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "dependencies": [
     "Steamodded (>=1.0.0~BETA-0312b)",
     "Lovely (>=0.7.1)"
