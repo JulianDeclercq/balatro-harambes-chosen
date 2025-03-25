@@ -26,7 +26,7 @@ Inspired by a chain of comments on [this YouTube short](https://www.youtube.com/
 on Windows this is usually `C:\Users\USERNAME\AppData\Roaming\Balatro\Mods`
 
 ## Hall of Fame
-While unlikely, if you manage to have this mod installed and get Harambe's Chosen, please [open an `Issue`](https://github.com/JulianDeclercq/harambes-chosen/issues) or [make a pull request](https://github.com/JulianDeclercq/harambes-chosen/pulls) with a video link (that hopefully includes a reaction!), I would love to add everyone who pulls it off to this Hall of Fame!
+While unlikely, if you manage to have this mod installed and get Harambe's Chosen, please comment on the [Hall of Fame discussion](https://github.com/JulianDeclercq/harambes-chosen/discussions/1) with a video link (that hopefully includes a reaction!), I would love to add everyone who pulls it off to this Hall of Fame!
 
 1.
 2.
