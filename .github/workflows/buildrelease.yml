@@ -33,7 +33,7 @@ jobs:
           cp main.lua "$DEST_DIR/"
           
           mkdir -p "$DEST_DIR/assets"
-          rsync -av --exclude='originals' assets/ "$DEST_DIR/assets/"
+          rsync -av --exclude='originals' --exclude='github' assets/ "$DEST_DIR/assets/"
           
           (
             cd "$TEMP_DIR"
