@@ -1,0 +1,13 @@
+{
+  "id": "harambeschosen",
+  "name": "Harambe's Chosen",
+  "prefix": "harambe",
+  "author": [ "Joolean" ],
+  "description": "description",
+  "main_file": "main.lua",
+  "version": "0.1.0",
+  "dependencies": [
+    "Steamodded (>=1.0.0~BETA-0312b)",
+    "Lovely (>=0.7.1)"
+  ]
+}

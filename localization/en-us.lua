@@ -1,7 +1,7 @@
 return {
     descriptions = {
         Joker = {
-            j_harambes_chosen = {
+            j_harambe_harambes_chosen = {
                 name = 'Harambe\'s Chosen',
                 text = {
                     '{X:attention,C:white} X#1# {} Mult',

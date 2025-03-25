@@ -1,20 +1,15 @@
---- STEAMODDED HEADER
---- MOD_NAME: Harambe's Chosen
---- MOD_ID: HARAMBESCHOSEN
---- MOD_AUTHOR: [Joolean]
---- MOD_DESCRIPTION: Cavendish went extinct... just as planned.
-
-----------------------------------------------
-------------MOD CODE -------------------------
-function SMODS.INIT.HARAMBESCHOSEN()
-    sendDebugMessage("Launching Harambe's Chosen!")
-end
-
 SMODS.Atlas {
     key = 'harambe_jokers',
     path = 'harambe_jokers.png',
     px = 71,
     py = 95
+}
+
+SMODS.Sound {
+    key = 'spawn',
+    path = 'spawn.ogg',
+    pitch = 1.0,
+    volume = 2.5
 }
 
 SMODS.Joker {
@@ -51,15 +46,14 @@ SMODS.Joker:take_ownership('cavendish',
         {
             config = {
                 extra = {
-                    odds = 2,
-                    Xmult = 3
+                    odds = 1,
+                    Xmult = 399
                 }
             },
             calculate = function(self, card, context)
                 if context.end_of_round and not context.blueprint and context.main_eval then
                     local pseudo = pseudorandom('cavendishseed')
                     local odds = G.GAME.probabilities.normal / card.ability.extra.odds
-                    print(string.format("pseudo: %s, odds: %s", tostring(pseudo), tostring(odds)))
                     if pseudo < odds then
                         G.E_MANAGER:add_event(Event({
                             func = function()
@@ -83,7 +77,7 @@ SMODS.Joker:take_ownership('cavendish',
                                             blockable = false,
                                             func = function()
                                                 SMODS.add_card({
-                                                    key = 'j_harambes_chosen',
+                                                    key = 'j_harambe_harambes_chosen',
                                                     set = 'Joker',
                                                     area = G.jokers,
                                                     no_edition = true,
@@ -100,8 +94,8 @@ SMODS.Joker:take_ownership('cavendish',
                             end
                         }))
                         return {
-                            message = 'Finally..'
-                            --message = localize('k_extinct_ex')
+                            message = 'Finally..',
+                            sound = 'harambe_spawn'
                         }
                     else
                         return {
