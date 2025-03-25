@@ -17,7 +17,7 @@ SMODS.Joker {
     atlas = 'harambe_jokers',
     pos = { x = 0, y = 0 },
     unlocked = true,
-    discovered = true,
+    discovered = false,
     yes_pool_flag = 'NEVER', -- this property doesn't actually exist, so it won't be in pool
     eternal_compat = true,
     perishable_compat = false,
@@ -44,12 +44,13 @@ SMODS.Joker {
 
 SMODS.Joker:take_ownership('cavendish',
         {
-            config = {
-                extra = {
-                    odds = 1,
-                    Xmult = 399
-                }
-            },
+            -- uncomment this for easier debugging since cavendish will always perish
+            --config = {
+            --    extra = {
+            --        odds = 1,
+            --        Xmult = 1000
+            --    }
+            --},
             calculate = function(self, card, context)
                 if context.end_of_round and not context.blueprint and context.main_eval then
                     local pseudo = pseudorandom('cavendishseed')
@@ -70,7 +71,6 @@ SMODS.Joker:take_ownership('cavendish',
                                         G.jokers:remove_card(card)
                                         card:remove()
 
-                                        -- you can do more AFTER stuff here
                                         G.E_MANAGER:add_event(Event({
                                             trigger = 'after',
                                             delay = 2.5,
