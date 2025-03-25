@@ -1,10 +1,10 @@
 # Harambe's Chosen, a Balatro mod
-![harambeevolution](https://github.com/JulianDeclercq/harambes-chosen/blob/main/assets/github/banner.webp)
+![harambeevolution](https://github.com/JulianDeclercq/harambes-chosen/blob/main/assets/github/banner.webp?raw=true)
 
 ## What
 <div align="center">
-    <img src="https://github.com/JulianDeclercq/harambes-chosen/blob/main/assets/originals/1_harambeschosen.png" alt="card">
-    <img width="30%" src="https://github.com/JulianDeclercq/harambes-chosen/blob/main/assets/github/description.webp" alt="description">
+    <img src="https://github.com/JulianDeclercq/harambes-chosen/blob/main/assets/originals/1_harambeschosen.png?raw=true" alt="card">
+    <img width="30%" src="https://github.com/JulianDeclercq/harambes-chosen/blob/main/assets/github/description.webp?raw=true" alt="description">
 </div>
 
 This mods adds a third entry to Balatro's banana chain!
@@ -15,7 +15,7 @@ When Cavendish inevitably hits its 1-in-1000 extinction chance, this slightly im
 Inspired by a chain of comments on [this YouTube short](https://www.youtube.com/shorts/zJQsjkq-cQY).
 
 <div align="center">
-    <img src="https://github.com/JulianDeclercq/harambes-chosen/blob/main/assets/github/inspiration.webp" alt="card">
+    <img src="https://github.com/JulianDeclercq/harambes-chosen/blob/main/assets/github/inspiration.webp?raw=true" alt="card">
 </div>
 
 ## Installation
