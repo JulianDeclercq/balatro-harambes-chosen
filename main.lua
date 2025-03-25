@@ -18,7 +18,7 @@ SMODS.Joker {
     pos = { x = 0, y = 0 },
     unlocked = true,
     discovered = false,
-    yes_pool_flag = 'NEVER', -- this property doesn't actually exist, so it won't be in pool
+    yes_pool_flag = 'NEVER', -- the property 'NEVER' doesn't actually exist, so it will never be in the pool
     eternal_compat = true,
     perishable_compat = false,
     blueprint_compat = true,
@@ -44,7 +44,7 @@ SMODS.Joker {
 
 SMODS.Joker:take_ownership('cavendish',
         {
-            -- uncomment this for easier debugging since cavendish will always perish
+            -- uncomment this for easier debugging to make cavendish always perish
             --config = {
             --    extra = {
             --        odds = 1,
